@@ -22,6 +22,7 @@ platforms :jruby do
 end
 
 gem 'jquery-rails'
+gem 'kramdown'
 
 # Use unicorn as the web server
 # gem 'unicorn'

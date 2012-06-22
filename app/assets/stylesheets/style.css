@@ -1,0 +1,390 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+Site CSS
+ */
+.group:before,
+.group:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; }
+
+* html .group {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .group {
+  zoom: 1; }
+
+/* IE7 */
+html {
+  overflow-y: scroll;
+  background: #545454; }
+
+body {
+  font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 300;
+  color: #3f3e3a; }
+
+.page {
+  -moz-box-shadow: 0px 0px 2px 2px #201f1d;
+  -webkit-box-shadow: 1 0px 0px 2px 2px #201f1d;
+  box-shadow: 0px 0px 2px 2px #201f1d;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 940px;
+  line-height: 1.5em;
+  background: #eeeeee url(../images/main_bg.png) repeat; }
+
+p {
+  color: #3f3e3a;
+  font-family: "skolar-1", "skolar-2", georgia, serif;
+  font-size: 1em; }
+
+a {
+  color: #2b7ea6;
+  text-decoration: underline; }
+
+a:hover {
+  color: #5eacd3; }
+
+/* Header */
+header#main {
+  background: #eeeeee url(../images/main_bg.png) repeat;
+  padding-bottom: 1%;
+  width: 100%;
+  overflow: hidden; }
+  header#main a {
+    margin: 0;
+    text-decoration: none;
+    color: #3f3e3a; }
+    header#main a h1 {
+      text-shadow: 0 1px 0 #fff;
+      font-size: 1.618em;
+      font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.2em;
+      margin-top: 2%;
+      margin-bottom: 0;
+      letter-spacing: 0; }
+  header#main img {
+    margin-left: 7%;
+    float: left;
+    padding-top: 1%;
+    height: 4em; }
+  header#main ul {
+    margin: 3% 0 0 20.75%; }
+  header#main li {
+    display: inline;
+    margin-right: 4em;
+    font-size: 1.3em;
+    text-shadow: 0 1px 0 #ddf7ff;
+    font-weight: 400; }
+
+#tagline {
+  border-top: 1px solid #2b7ea6;
+  border-bottom: 1px solid #2b7ea6;
+  padding: 1em;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 0%;
+  margin-bottom: 7%;
+  text-align: center;
+  line-height: 1.2em;
+  clear: both;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #2b7ea6;
+  font-weight: 200; }
+
+.article_list {
+  list-style: none;
+  line-height: 1em; }
+  .article_list li {
+    margin: 0 0 0.75em -2em; }
+  .article_list .categories {
+    font-size: .80em;
+    font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+    font-weight: 300; }
+
+/* Article */
+article {
+  width: 75%; }
+  article p {
+    margin-bottom: .75em; }
+  article h1 {
+    font-size: 1.618em; }
+  article h2 {
+    font-size: 1.3em;
+    font-weight: 500; }
+  article h3 {
+    font-weight: 500;
+    font-family: "skolar-1", "skolar-2", georgia, serif; }
+  article .right {
+    float: right; }
+  article ul {
+    list-style: disc;
+    font-family: "skolar-1", "skolar-2", georgia, serif;
+    margin: 1em 0 1em 2em; }
+  article li {
+    margin-bottom: .75em; }
+  article ol {
+    font-family: "skolar-1", "skolar-2", georgia, serif;
+    list-style: decimal;
+    margin: 1em 0 1em 2em; }
+  article a {
+    colour: #2b7ea6; }
+  article figure {
+    margin: 1em 0 1em 0; }
+    article figure img {
+      width: 100%; }
+    article figure figcaption p {
+      font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+      font-size: .80em;
+      font-weight: 300px;
+      font-style: normal;
+      line-height: 1.3em;
+      margin-top: -1%; }
+  article p.opening {
+    font-style: italic;
+    font-size: 1.17em;
+    line-height: 1.25em;
+    margin-bottom: 1em; }
+  article .info {
+    margin: -5.1% 0 0 10%;
+    clear: left;
+    float: left;
+    width: 16%;
+    line-height: 1.2em; }
+    article .info .published-on {
+      color: #3f3e3a;
+      font-weight: 500;
+      letter-spacing: -0.1em; }
+    article .info p {
+      font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+      font-size: .85em; }
+
+header h1 {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #2b7ea6;
+  margin-left: 35%;
+  margin-bottom: .6em;
+  line-height: 1em; }
+header a {
+  text-decoration: none; }
+
+#article-wrap {
+  margin-left: 35%; }
+
+#page-nav {
+  margin: 5% 0 10% 0%;
+  width: 100%; }
+  #page-nav .page-nav-prev {
+    float: right; }
+  #page-nav .page-nav-next {
+    float: left; }
+
+footer {
+  background: #3f3e3a;
+  overflow: hidden;
+  color: #dad6ca;
+  clear: both;
+  margin-top: 5%;
+  width: 100% auto;
+  padding: .84%; }
+  footer .article_list li {
+    margin-left: 0em; }
+  footer p {
+    font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #dad6ca; }
+  footer a {
+    color: #dad6ca; }
+  footer h2 {
+    line-height: 1.2em;
+    margin-top: 1em;
+    font-weight: 500;
+    font-size: 1.3em; }
+  footer #footer-left {
+    padding: 1% 5% 1% 5%;
+    background: transparent;
+    float: left;
+    width: 30%; }
+  footer #footer-right {
+    padding: 1% 5% 1% 5%;
+    background: transparent;
+    float: right;
+    width: 50%; }
+  footer ul {
+    list-style: none; }
+
+@media screen and (max-width: 900px) {
+  .page {
+    width: 95%; }
+
+  .page-nav {
+    width: 90%;
+    margin: 10% auto; }
+
+  header#main li {
+    margin-right: 3em; }
+
+  article .info {
+    margin-top: -5.5%; }
+  article #article-wrap {
+    width: 80%; } }
+@media screen and (max-width: 740px) {
+  header#main ul {
+    margin-left: 25%;
+    margin-top: 1.5em; }
+  header#main li {
+    font-size: 1.2em;
+    margin-right: 2em; }
+  header#main img {
+    margin-left: 3%; }
+
+  #tagline {
+    font-size: 1.2em; }
+
+  article .info {
+    margin: -5.5% 0 0 5%; }
+    article .info .published-on {
+      color: #3f3e3a;
+      font-weight: 500;
+      letter-spacing: -0.1em;
+      font-size: .75em;
+      line-height: 1.1em; }
+    article .info p {
+      font-family: "futura-pt-1", "futura-pt-2", "helvetica", sans-serif;
+      font-size: .75em; }
+  article header h1 {
+    font-size: 1.4em;
+    margin-left: 27%; }
+  article #article-wrap {
+    margin-left: 27%;
+    width: 95%; } }
+@media screen and (max-width:640px) {
+  header#main li {
+    font-size: 1em; }
+
+  article {
+    width: 90%; }
+    article .info {
+      float: none;
+      margin: -2% 0 2% 10%;
+      width: 100%; }
+    article header h1 {
+      margin-left: 10%; }
+    article #article-wrap {
+      width: 92%;
+      margin-left: 10%; } }
+@media screen and (max-width:540px) {
+  .page {
+    width: 100%; }
+
+  footer {
+    font-size: .85em; }
+    footer #footer-left {
+      float: none;
+      width: 90%; }
+    footer #footer-right {
+      float: none;
+      width: 90%; }
+
+  article #article-wrap figcaption p {
+    font-size: .95em; } }
+@media screen and (max-width: 480px) {
+  header#main img {
+    display: block;
+    margin: 3% auto;
+    float: none; }
+  header#main ul {
+    margin: 1.5% 0 0 15%;
+    float: none; }
+
+  #tagline {
+    width: 80%;
+    margin-top: 2%;
+    margin-bottom: 10%; }
+
+  article {
+    width: 95%; }
+    article .info {
+      margin-left: 4%; }
+    article header h1 {
+      margin-left: 4%; }
+    article #article-wrap {
+      margin-left: 4%; } }
+@media screen and (max-width:400px) {
+  header#main ul {
+    margin-left: 5%;
+    margin-top: 4%;
+    text-align: center; }
+  header#main li {
+    font-size: 1em;
+    margin-right: 1.31em; }
+
+  #tagline {
+    font-size: 1em;
+    margin-top: 2%;
+    margin-bottom: 15%; }
+
+  article {
+    width: 100%; }
+
+  footer {
+    line-height: 1.2em; }
+    footer ul.article_list li {
+      margin-bottom: 2em; } }
