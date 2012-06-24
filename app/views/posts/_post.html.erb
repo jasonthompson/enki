@@ -1,13 +1,16 @@
-<h2><%= link_to(post.title, post_path(post)) %></h2>
-<div class="entrybody">
+<article>
+<header>
+	<h1><%=  link_to (post.title), post %></h1>
+</header>
+<div class="info group">
+	<div class="published-on"><%= format_post_date(post.published_at) %></div>
+	<p>Posted in <%= linked_tag_list(post.tags) %></p>
+</div><!-- info group -->
+<div id="article-wrap">
+
   <%=raw post.body_html %>
-</div>
-<div class="meta">
-  <ul>
-    <li class="date">Posted on <%= format_post_date(post.published_at) %></li>
-    <li class="comments"><%= link_to(pluralize(post.approved_comments.size, "comment"), post_path(post, :anchor => 'comments')) %></li>
-    <% unless post.tags.empty? -%>
-    <li class="tags">Tagged <%= linked_tag_list(post.tags) %></li>
-    <% end -%>
-  </ul>
-</div>
+
+
+    <p><%= link_to(pluralize(post.approved_comments.size, "comment"), post_path(post, :anchor => 'comments')) %></p>
+</div><!-- article-wrap -->
+</article>

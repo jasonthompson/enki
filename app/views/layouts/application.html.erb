@@ -6,45 +6,49 @@
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
+  <script type="text/javascript" src="http://use.typekit.com/vfg6lmf.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
   <%= open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation] %>
   <%= yield(:head) %>
 </head>
 <body>
-  <div id="page_container">
-    <div id="content">
-      <h1 id="page_heading"><a href="<%= root_url %>"><%= enki_config[:title] %></a></h1>
+	<div class="page group">
+   <header id="main">
 
-      <div id="main">
-        <%= yield %>
-      </div>
+			<%= link_to image_tag("logo.png", :alt => "Home"), posts_path %>
+			
+			<nav>
+				<ul>
+					<li><%= link_to "Home", posts_path, :title => "Home" %></li>
+					<li><%= link_to "Archives", archives_path, :title => "Archives" %></li>
+					<li><%= link_to "About", "/about", :title => "About" %></li>
+					<li><%= link_to "Subscribe", "/atom.xml", :title => "Subscibe to Jason Thompson's weblog" %></li>
+				</ul>
+		 </nav>
+		 <p id="tagline">This is where Jason Thompson thinks outloud</p>
+	</header>
+			<%= yield %>
 
-      <div id="navigation">
-        <h2>Pages</h2>
-        <ul>
-          <% page_links_for_navigation.each do |link| -%>
-            <li><%= link_to(link.name, link.url) %></li>
-          <% end -%>
-        </ul>
-        <% unless category_links_for_navigation.empty? -%>
-          <h2>Categories</h2>
-          <ul>
-            <% category_links_for_navigation.each do |link| -%>
-              <li><%= link_to(link.name, link.url) %></li>
-            <% end -%>
-          </ul>
-        <% end -%>
-        <form method="get" id="sform" action="http://www.google.com/search">
-          <div>
-            <h2><label for="q">Search</label></h2>
+<footer>
+<div id="footer-left">
+	<h2>Who?</h2>
+	<p>Jason Thompson is a husband, father, cyclist, writer, photographer and programmer and all-around builder of stuff based in Toronto, Ontario.</p>
 
-            <input type="text" id="q" value="" name="q">
-            <input type="hidden" name="sitesearch" value="<%= enki_config[:url] %>">
-          </div>
-        </form>
-      </div>
+	<h2>Copyright</h2>
+	<p>The material on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike license</a>.
 
-      <div id="footer"><%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %>. Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> and <%= link_to "ATOM", "http://feedvalidator.org/check.cgi?url=#{enki_config[:url]}/posts.atom" %>. Powered by <a href="http://www.enkiblog.com" title="A Ruby on Rails blogging app for the fashionable developer">Enki</a>.</div>
-    </div>
-  </div>
+</div><!-- footer-left -->
+
+<div id="footer-right">
+	<h2>Recent Posts</h2>
+
+	<h2>Elsewhere</h2>
+	  <ul>
+			<li><a href="http://www.120babies.ca/" title="Mary-Margaret's weblog">MM's Weblog</a></li>
+			<li><a href="http://www.twitters.com/jasonthompson" title="Follow me on tsitter">Follow me on Twitter</a></li>
+		</ul>
+</footer>
+  </div><!-- page group -->
 </body>
 </html>
