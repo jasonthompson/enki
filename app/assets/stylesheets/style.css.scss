@@ -162,12 +162,16 @@ header#main {
 
 /* Article */
 article {
-  width: 75%; }
+	margin-bottom:4em;
+  width: 75%;
+ }
+	 article header {
+		 margin-bottom:-.5em; }
   article p {
     margin-bottom: .75em; }
-  article h1 {
+  article h1 {	
     font-size: 1.618em; }
-  article h2 {
+  article h2 {	
     font-size: 1em;
     font-weight: 600; }
   article h3 {
@@ -204,7 +208,7 @@ article {
     line-height: 1.25em;
     margin-bottom: 1em; }
   article .info {
-    margin: -5.1% 0 0 10%;
+    margin: -1.5em 0 0 10%;
     clear: left;
     float: left;
     width: 16%;
